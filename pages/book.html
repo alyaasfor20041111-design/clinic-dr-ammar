@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en" class="dark" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>احجز موعدك الآن</title>
+  <!-- font awesome icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="icon" type="image/x-icon" href="../src/images/icon.png" />
+  <link href="../src/output.css" rel="stylesheet" />
+</head>
+
+<body>
+   <header
+    class="sticky top-0 left-0 w-full z-[100] font-primary bg-background dark:bg-[#001D47] text-primary border-b border-border/40 dark:border-white/10 transition-all duration-300 shadow-sm">
+    <div
+      class="hidden md:flex bg-bg-dark dark:bg-[#00265C] px-8 md:px-16 py-2.5 justify-between items-center border-b border-white/5">
+      <div class="flex items-center gap-6">
+        <div class="flex items-center gap-2.5">
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-icon opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-icon"></span>
+          </span>
+          <span class="text-white text-[11px] font-bold tracking-widest font-secondary">الطوارئ والاستشارات متوفرة
+            24/7</span>
+        </div>
+      </div>
+
+      <!-- الجانب الأيسر للشريط العلوي: روابط سريعة وزر الـ Dark Mode الأساسي -->
+      <div class="flex items-center gap-6 text-[11px] font-medium text-white/80 font-secondary">
+        <a href="#" class="hover:text-icon transition-colors duration-300">سياسة الخصوصية</a>
+        <span class="opacity-30">|</span>
+        <a href="#" class="hover:text-icon transition-colors duration-300">الأسئلة الشائعة</a>
+        <span class="opacity-30">|</span>
+
+        <!-- زر تبديل المظهر (Dark Mode) للشاشات الكبيرة -->
+        <button id="theme-toggle" type="button"
+          class="text-white/80 dark:text-gray-300 hover:bg-white/10 dark:hover:bg-white/5 focus:outline-none focus:ring-4 focus:ring-white/10 rounded-lg text-sm p-1.5 transition-all">
+          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414z"
+              fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="px-6 md:px-16 py-4">
+      <div class="max-w-[1600px] mx-auto flex items-center justify-between">
+        <!-- شعار وهوية العيادة -->
+        <a href="/" class="transition-transform duration-300 hover:scale-105 flex items-center gap-3">
+          <img src="../src/images/logo.png" alt="Logo" class="w-14 h-auto" />
+          <div class="hidden sm:block text-right">
+            <span class="block text-primary dark:text-white font-bold text-lg leading-none">د. عمار السايح</span>
+            <span class="text-secondary dark:text-icon text-[11px] font-secondary font-semibold">للجراحة العامة
+              والمناظير</span>
+          </div>
+        </a>
+
+        <!-- روابط الملاحة الأساسية لشاشات الكمبيوتر والتابلت -->
+        <ul
+          class="hidden lg:flex items-center gap-2 font-secondary bg-input/50 dark:bg-[#00265C]/50 p-1.5 rounded-full border border-border/60 dark:border-white/10">
+          <li>
+            <a href="#"
+              class="px-6 py-2 text-primary dark:text-white font-bold text-sm bg-white dark:bg-[#003A87] shadow-sm rounded-full transition-all">الرئيسية</a>
+          </li>
+          <li>
+            <a href="#"
+              class="px-6 py-2 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white rounded-full font-bold text-sm transition-all flex items-center gap-2">الخدمات
+              الطبية
+              <i class="fa-solid fa-chevron-down text-[10px] opacity-70"></i></a>
+          </li>
+          <li>
+            <a href="#"
+              class="px-6 py-2 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white rounded-full font-bold text-sm transition-all">أطباؤنا</a>
+          </li>
+          <li>
+            <a href="#"
+              class="px-6 py-2 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white rounded-full font-bold text-sm transition-all">عن
+              العيادة</a>
+          </li>
+          <li class="relative">
+  <button id="dropdownBtn" class="px-6 py-2 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white rounded-full font-bold text-sm transition-all flex items-center gap-2 focus:outline-none">
+    <span>لوحة التحكم</span>
+    <i id="dropdownArrow" class="fa-solid fa-chevron-down text-[10px] opacity-70 transition-transform duration-300"></i>
+  </button>
+
+  <ul id="dropdownMenu" class="absolute right-0 top-full mt-1 w-48 bg-white dark:bg-[#00265C] border border-border dark:border-white/10 rounded-2xl shadow-xl py-2 hidden z-50">
+    
+    <li>
+      <a href="../pages/dashboard/patient/patient-dashboard.html" class="flex items-center gap-2.5 px-4 py-2.5 text-xs font-secondary font-bold text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white transition-colors">
+        <i class="fa-solid fa-user-injured text-sm text-gray-400 w-4 text-center"></i>
+        <span>بوابة المريض</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="../pages/dashboard/doctor/doctor-dashboard.html" class="flex items-center gap-2.5 px-4 py-2.5 text-xs font-secondary font-bold text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white transition-colors">
+        <i class="fa-solid fa-user-md text-sm text-gray-400 w-4 text-center"></i>
+        <span>بوابة الطبيب</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="../pages/dashboard/secretary/secretary-dashboard.html" class="flex items-center gap-2.5 px-4 py-2.5 text-xs font-secondary font-bold text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white transition-colors">
+        <i class="fa-solid fa-user-tie text-sm text-gray-400 w-4 text-center"></i>
+        <span>بوابة السكرتير</span>
+      </a>
+    </li>
+
+  </ul>
+</li>
+
+
+        </ul>
+
+        <!-- أزرار الإجراءات السريعة والموبايل -->
+        <div class="flex items-center gap-3">
+          <a href="../pages/dashboard/patient/patient-dashboard.html"
+            class="hidden sm:inline-flex bg-card dark:bg-[#003175] text-primary dark:text-white hover:bg-primary hover:text-white px-5 py-2.5 rounded-xl font-bold text-xs transition-all border border-primary/10 dark:border-white/10">
+            بوابة المرضى
+          </a>
+          <a href="../pages/book.html"
+            class="bg-button dark:bg-secondary text-white dark:text-[#001D47] hover:bg-button-hover dark:hover:bg-icon px-6 py-2.5 rounded-xl font-bold text-xs transition-all active:scale-95 shadow-lg shadow-button/20 dark:shadow-secondary/10 font-primary">
+            احجز موعداً فوريًا
+          </a>
+
+          <!-- زر فتح القائمة الجانبية للموبايل -->
+          <button id="mobile-menu-button"
+            class="lg:hidden flex items-center justify-center w-10 h-10 text-primary dark:text-white bg-input dark:bg-[#00265C] rounded-xl border border-border dark:border-white/10 transition-all active:scale-95">
+            <i class="fa-solid fa-bars-staggered text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div id="mobile-sidebar" class="fixed inset-0 z-[150] pointer-events-none font-primary">
+    <!-- تأثير ضبابي شفاف عند الفتح لغلق الرؤية عن المحتوى الخلفي -->
+    <div id="sidebar-overlay"
+      class="absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0 transition-opacity duration-300 ease-in-out"></div>
+
+    <!-- جسم السايدبار الجانبي -->
+    <div id="sidebar-content"
+      class="absolute top-0 right-0 w-[300px] h-full bg-background dark:bg-[#001D47] shadow-2xl border-l border-border/40 dark:border-white/10 translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between">
+      <!-- الهيدر الداخلي للسايدبار: اللوغو وزر الإغلاق -->
+      <div class="p-6 border-b border-border/40 dark:border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <img src="../src/images/logo.png" alt="Logo" class="w-10 h-auto" />
+          <div class="text-right">
+            <span class="block text-primary dark:text-white font-bold text-sm leading-none">د. عمار السايح</span>
+          </div>
+        </div>
+        <button id="sidebar-close-button"
+          class="w-9 h-9 flex items-center justify-center rounded-xl bg-input dark:bg-[#00265C] text-primary dark:text-white border border-border dark:border-white/10">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- روابط الملاحة الداخلية للموبايل -->
+      <div class="p-6 flex-1 overflow-y-auto">
+        <ul class="space-y-3 font-secondary">
+          <li>
+            <a href="#"
+              class="flex items-center gap-3 px-4 py-3 text-primary dark:text-white font-bold text-sm bg-card dark:bg-[#003A87] rounded-xl transition-all">
+              <i class="fa-solid fa-house text-secondary dark:text-icon"></i>
+              <span>الرئيسية</span>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              class="flex items-center gap-3 px-4 py-3 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-sm hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
+              <i class="fa-solid fa-stethoscope text-secondary dark:text-icon"></i>
+              <span>الخدمات الطبية</span>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              class="flex items-center gap-3 px-4 py-3 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-sm hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
+              <i class="fa-solid fa-user-doctor text-secondary dark:text-icon"></i>
+              <span>أطباؤنا</span>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              class="flex items-center gap-3 px-4 py-3 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-sm hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
+              <i class="fa-solid fa-hospital text-secondary dark:text-icon"></i>
+              <span>عن العيادة</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- أزرار الإجراءات داخل شاشة الموبايل -->
+        <div class="my-6 border-t border-border/40 dark:border-white/10 pt-6 space-y-4">
+          <a href="#"
+            class="flex items-center justify-center text-center bg-card dark:bg-[#003175] text-primary dark:text-white px-5 py-3 rounded-xl font-bold text-sm border border-primary/10 transition-all">
+            بوابة المرضى
+          </a>
+          <a href="#"
+            class="flex items-center justify-center text-center bg-button dark:bg-secondary text-white dark:text-[#001D47] px-5 py-3 rounded-xl font-bold text-sm shadow-md transition-all">
+            احجز موعداً فوريًا
+          </a>
+        </div>
+      </div>
+
+      <!-- الفوتر السفلي للسايدبار: تبديل الـ Dark Mode الخاص بأجهزة الموبايل -->
+      <div
+        class="p-6 border-t border-border/40 dark:border-white/10 bg-input/30 dark:bg-[#00265C]/20 flex items-center justify-between">
+        <span class="text-xs font-bold text-gray-500 dark:text-gray-400 font-secondary">مظهر التطبيق</span>
+        <button id="theme-toggle-mobile" type="button"
+          class="text-primary dark:text-icon bg-white dark:bg-[#00265C] border border-border dark:border-white/10 rounded-xl text-sm p-2.5 shadow-sm">
+          <i class="fa-solid fa-moon dark:hidden"></i>
+          <i class="fa-solid fa-sun hidden dark:block"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main
+    class="min-h-screen bg-background dark:bg-[#001D47] text-primary dark:text-white transition-colors duration-300 pt-28 pb-20 font-secondary"
+    dir="rtl">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8 relative z-10">
+
+      <!-- رأس الصفحة توجيهي بسيط -->
+      <div class="text-center max-w-2xl mx-auto mb-10 space-y-3 ">
+        <span
+          class="inline-block bg-input dark:bg-[#00265C] border border-border/60 dark:border-white/10 text-secondary dark:text-icon text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
+          بوابة حجز الموعد الطبي
+        </span>
+        <h1 class="text-2xl sm:text-3xl font-primary font-bold text-primary dark:text-white leading-tight">
+          تسجيل بيانات الموعد والملف الرقمي
+        </h1>
+        <p class="text-primary/70 dark:text-gray-300 text-xs sm:text-sm m">
+          يرجى إدخال البيانات المطلوبة بدقة لتنظيم السجل الطبي الخاص بك بشكل آمن.
+        </p>
+      </div>
+
+      <!-- استمارة حجز الموعد المحمية -->
+      <div class="max-w-3xl mx-auto">
+        <form id="medical-booking-form"
+          class="bg-white dark:bg-[#001D47] border border-border/40 dark:border-white/10 rounded-[1.5rem] p-6 sm:p-8 md:p-10  space-y-6">
+
+          <!-- قسم: معلومات المريض -->
+          <div class="space-y-4">
+            <h3
+              class="text-sm sm:text-base font-primary font-bold text-primary dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-user-doctor text-secondary dark:text-icon"></i>
+              معلومات المريض الشخصية
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <!-- الاسم -->
+              <div class="space-y-1.5">
+                <label class="text-xs font-bold text-primary/70 dark:text-gray-300 block">الاسم المريض الثلاثي:</label>
+                <input type="text" id="patient-name" placeholder="محمد عبد الله العتيبي"
+                  class="w-full bg-input/50 dark:bg-[#00265C]/50 border border-border/60 dark:border-white/10 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-button dark:focus:border-icon transition-colors text-right"
+                  required />
+              </div>
+
+              <!-- العمر -->
+              <div class="space-y-1.5">
+                <label class="text-xs font-bold text-primary/70 dark:text-gray-300 block">العمر:</label>
+                <input type="number" id="patient-age" placeholder="مثال: 35"
+                  class="w-full bg-input/50 dark:bg-[#00265C]/50 border border-border/60 dark:border-white/10 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-button dark:focus:border-icon transition-colors text-right"
+                  required />
+              </div>
+
+              <!-- الجنس -->
+              <div class="space-y-1.5">
+                <label class="text-xs font-bold text-primary/70 dark:text-gray-300 block">الجنس:</label>
+                <div class="relative">
+                  <select id="patient-gender"
+                    class="w-full bg-input/50 dark:bg-[#00265C]/50 border border-border/60 dark:border-white/10 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:border-button dark:focus:border-icon transition-colors text-right appearance-none"
+                    required>
+                    <option value="" disabled selected>اختر الجنس</option>
+                    <option value="male">ذكر</option>
+                    <option value="female">أنثى</option>
+                  </select>
+                  <div
+                    class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-4 text-primary/50 dark:text-white/50">
+                    <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- هل سبق زيارة العيادة؟ -->
+              <div class="space-y-1.5">
+                <label class="text-xs font-bold text-primary/70 dark:text-gray-300 block">هل سبقت لك زيارة العيادة من
+                  قبل؟</label>
+                <div class="relative">
+                  <select id="clinic-visited"
+                    class="w-full bg-input/50 dark:bg-[#00265C]/50 border border-border/60 dark:border-white/10 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:border-button dark:focus:border-icon transition-colors text-right appearance-none"
+                    required>
+                    <option value="yes">نعم (استخدام نفس السجل الطبي الحالي)</option>
+                    <option value="no" selected>لا (إنشاء سجل طبي رقمي جديد)</option>
+                  </select>
+                  <div
+                    class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-4 text-primary/50 dark:text-white/50">
+                    <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="border-border/40 dark:border-white/5" />
+
+          <!-- قسم: رفع الملفات الطبية المخصصة -->
+          <div class="space-y-4">
+            <h3
+              class="text-sm sm:text-base font-primary font-bold text-primary dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-paperclip text-secondary dark:text-icon"></i>
+              رفع الملفات والتقارير الطبية
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <!-- تحاليل -->
+              <div
+                class="border border-dashed border-border/60 dark:border-white/10 rounded-xl p-4 bg-input/10 dark:bg-[#00265C]/20 relative text-center hover:border-button dark:hover:border-icon transition-colors group">
+                <input type="file" id="file-lab"
+                  class="absolute inset-0 w-full h-full opacity-0 cursor-pointer text-transparent"
+                  accept=".pdf,.jpg,.jpeg,.png" />
+                <div class="pointer-events-none space-y-1">
+                  <i
+                    class="fa-solid fa-flask-vial text-primary/40 dark:text-white/40 group-hover:text-button dark:group-hover:text-icon text-lg transition-colors"></i>
+                  <p class="text-[11px] font-bold block text-primary dark:text-white">تحاليل طبية</p>
+                  <p id="status-lab" class="text-[10px] text-primary/50 dark:text-gray-400">اضغط للرفع</p>
+                </div>
+              </div>
+
+              <!-- أشعة -->
+              <div
+                class="border border-dashed border-border/60 dark:border-white/10 rounded-xl p-4 bg-input/10 dark:bg-[#00265C]/20 relative text-center hover:border-button dark:hover:border-icon transition-colors group">
+                <input type="file" id="file-xray"
+                  class="absolute inset-0 w-full h-full opacity-0 cursor-pointer text-transparent"
+                  accept=".pdf,.jpg,.jpeg,.png" />
+                <div class="pointer-events-none space-y-1">
+                  <i
+                    class="fa-solid fa-radiation text-primary/40 dark:text-white/40 group-hover:text-button dark:group-hover:text-icon text-lg transition-colors"></i>
+                  <p class="text-[11px] font-bold block text-primary dark:text-white">أشعة سينية / مقطعية</p>
+                  <p id="status-xray" class="text-[10px] text-primary/50 dark:text-gray-400">اضغط للرفع</p>
+                </div>
+              </div>
+
+              <!-- إيكو وملاحظات طبية -->
+              <div
+                class="border border-dashed border-border/60 dark:border-white/10 rounded-xl p-4 bg-input/10 dark:bg-[#00265C]/20 relative text-center hover:border-button dark:hover:border-icon transition-colors group">
+                <input type="file" id="file-echo"
+                  class="absolute inset-0 w-full h-full opacity-0 cursor-pointer text-transparent"
+                  accept=".pdf,.jpg,.jpeg,.png" />
+                <div class="pointer-events-none space-y-1">
+                  <i
+                    class="fa-solid fa-heart-pulse text-primary/40 dark:text-white/40 group-hover:text-button dark:group-hover:text-icon text-lg transition-colors"></i>
+                  <p class="text-[11px] font-bold block text-primary dark:text-white">تخطيط قلب / إيكو</p>
+                  <p id="status-echo" class="text-[10px] text-primary/50 dark:text-gray-400">اضغط للرفع</p>
+                </div>
+              </div>
+            </div>
+            <p class="text-[10px] text-primary/60 dark:text-gray-400 text-right">💡 سيتم ربط كافة التقارير المرفوعة بشكل
+              مباشر وتلقائي بسجل المريض المعتمد.</p>
+          </div>
+
+          <hr class="border-border/40 dark:border-white/5" />
+
+          <!-- قسم: الملاحظات الإضافية -->
+          <div class="space-y-2">
+            <label class="text-xs font-bold text-primary/70 dark:text-gray-300 block">ملاحظات إضافية (مربع نص
+              حر):</label>
+            <textarea id="additional-notes" rows="3"
+              placeholder="اكتب هنا أي تفاصيل إضافية أو أعراض تشعر بها تود إطلاع الطبيب عليها..."
+              class="w-full bg-input/50 dark:bg-[#00265C]/50 border border-border/60 dark:border-white/10 rounded-xl p-4 text-xs placeholder:text-primary/40 dark:placeholder:text-gray-500 focus:outline-none focus:border-button dark:focus:border-icon transition-colors text-right resize-none"></textarea>
+          </div>
+
+          <!-- أزرار التحكم -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+            <button type="submit"
+              class="sm:col-span-2 bg-button dark:bg-secondary text-white dark:text-[#001D47] hover:bg-button-hover dark:hover:bg-icon py-3 rounded-xl font-primary font-bold text-xs sm:text-sm transition-all shadow-md active:scale-[0.99] flex items-center justify-center gap-2">
+              <i class="fa-solid fa-check text-xs"></i>
+              <span>تأكيد الحجز</span>
+            </button>
+
+            <button type="button" id="btn-cancel"
+              class="bg-slate-100 dark:bg-white/5 text-primary/80 dark:text-gray-300 hover:bg-slate-200 dark:hover:bg-white/10 py-3 rounded-xl font-primary font-bold text-xs sm:text-sm transition-all active:scale-[0.99] text-center">
+              إلغاء
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </main>
+  <footer
+    class="relative bg-white dark:bg-[#001D47] text-primary transition-colors duration-300 border-t border-border/40 dark:border-white/10  overflow-hidden pt-20">
+    <div class="max-w-[1600px] mx-auto px-6 md:px-16 relative z-10">
+      <!-- الطبقة الأولى: بطاقة الحجز الفورية العريضة (Mega Call-To-Action Card) -->
+      <div
+        class="relative bg-gradient-to-l from-input/60 to-card/40 dark:from-[#00265C] dark:to-[#001D47] rounded-[2.5rem] p-8 md:p-12 border border-border/60 dark:border-white/10 flex flex-col lg:flex-row items-center justify-between gap-8 mb-16 shadow-lg group">
+        <!-- شارة صغيرة عائمة -->
+        <div
+          class="absolute -top-3.5 right-10 bg-secondary dark:bg-icon text-white dark:text-[#001D47] px-4 py-1 rounded-full text-[10px] font-bold font-secondary tracking-wide shadow-sm">
+          الجدولة الذكية 2026
+        </div>
+
+        <div class="text-right space-y-2 lg:max-w-2xl">
+          <h3 class="text-2xl md:text-3xl font-primary font-bold text-primary dark:text-white leading-tight">
+            ابدأ رحلة تعافيك الآن مع
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-l from-secondary to-primary dark:from-icon dark:to-white">أنظمة
+              الجراحة الميكروسكوبية</span>
+          </h3>
+          <p class="text-primary/70 dark:text-gray-300 font-secondary text-sm leading-relaxed">
+            احجز استشارتك التخصصية المباشرة مع الدكتور عمار السايح لتجربة
+            علاجية مخصصة تضمن لك الأمان والراحة التامة.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto shrink-0 font-primary">
+          <a href="tel:+966500000000"
+            class="w-full sm:w-auto text-center bg-card dark:bg-white/5 hover:bg-primary/5 text-primary dark:text-white border border-border dark:border-white/10 px-6 py-3.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-2">
+            <i class="fa-solid fa-headset text-secondary dark:text-icon"></i>
+            دعم فوري
+          </a>
+          <a href="#"
+            class="w-full sm:w-auto text-center bg-button dark:bg-secondary text-white dark:text-[#001D47] hover:bg-button-hover dark:hover:bg-icon px-8 py-3.5 rounded-xl font-bold text-xs transition-all shadow-md active:scale-95 flex items-center justify-center gap-2">
+            <span>تأكيد حجز سريع</span>
+            <i class="fa-solid fa-arrow-left-long"></i>
+          </a>
+        </div>
+      </div>
+      <!-- الطبقة الثانية: الهوية والروابط الموزعة بهندسة خطية أنيقة -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 text-right font-secondary border-b border-border/40 dark:border-white/5">
+        <!-- العمود الأول: الشعار والرؤية الطبية -->
+        <div class="space-y-5">
+          <a href="/" class="flex items-center gap-3 group">
+            <img src="../src/images/logo.png" alt="Logo"
+              class="w-14 h-auto transition-transform duration-300 group-hover:scale-105" />
+            <div>
+              <span class="block text-primary dark:text-white font-bold text-xl leading-none font-primary">د. عمار
+                السايح</span>
+              <span class="text-secondary dark:text-icon text-xs font-semibold block mt-1">للجراحة العامة
+                والمناظير</span>
+            </div>
+          </a>
+          <p class="text-sm text-primary/70 dark:text-gray-400 leading-relaxed">
+            مؤسسة طبية مكرسة لابتكار معايير آمنة في الجراحات المعقدة
+            والمناظير، بالاعتماد على أدق التجهيزات الرقمية الحديثة.
+          </p>
+          <!-- قنوات التواصل الاجتماعي بتصميم مصمت فاخر -->
+          <div class="flex items-center gap-2 pt-2">
+            <a href="#"
+              class="w-9 h-9 bg-input/40 dark:bg-[#00265C]/40 hover:bg-button hover:text-white dark:hover:bg-secondary dark:hover:text-[#001D47] text-primary dark:text-gray-300 rounded-lg flex items-center justify-center border border-border/60 dark:border-white/10 transition-all duration-300"><i
+                class="fa-brands fa-x-twitter text-xs"></i></a>
+            <a href="#"
+              class="w-9 h-9 bg-input/40 dark:bg-[#00265C]/40 hover:bg-button hover:text-white dark:hover:bg-secondary dark:hover:text-[#001D47] text-primary dark:text-gray-300 rounded-lg flex items-center justify-center border border-border/60 dark:border-white/10 transition-all duration-300"><i
+                class="fa-brands fa-linkedin-in text-xs"></i></a>
+            <a href="#"
+              class="w-9 h-9 bg-input/40 dark:bg-[#00265C]/40 hover:bg-button hover:text-white dark:hover:bg-secondary dark:hover:text-[#001D47] text-primary dark:text-gray-300 rounded-lg flex items-center justify-center border border-border/60 dark:border-white/10 transition-all duration-300"><i
+                class="fa-brands fa-instagram text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- العمود الثاني: الخدمات الطبية الجراحية -->
+        <div class="space-y-4">
+          <h4
+            class="text-xs font-bold text-secondary dark:text-icon uppercase tracking-wider relative pb-2 after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-6 after:h-[2px] after:bg-secondary dark:after:bg-icon">
+            أقسام العلاج الدقيق
+          </h4>
+          <ul class="space-y-3 text-sm font-medium pt-1">
+            <li>
+              <a href="#"
+                class="text-primary/80 dark:text-gray-300 hover:text-button dark:hover:text-icon transition-colors flex items-center gap-2 group"><span
+                  class="w-1 h-1 rounded-full bg-border dark:bg-white/20 group-hover:bg-secondary dark:group-hover:bg-icon transition-all"></span>
+                جراحات السمنة المتطورة</a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-primary/80 dark:text-gray-300 hover:text-button dark:hover:text-icon transition-colors flex items-center gap-2 group"><span
+                  class="w-1 h-1 rounded-full bg-border dark:bg-white/20 group-hover:bg-secondary dark:group-hover:bg-icon transition-all"></span>
+                استئصال الأورام بالمناظير</a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-primary/80 dark:text-gray-300 hover:text-button dark:hover:text-icon transition-colors flex items-center gap-2 group"><span
+                  class="w-1 h-1 rounded-full bg-border dark:bg-white/20 group-hover:bg-secondary dark:hover:bg-icon transition-all"></span>
+                جراحة القنوات المرارية</a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-primary/80 dark:text-gray-300 hover:text-button dark:hover:text-icon transition-colors flex items-center gap-2 group"><span
+                  class="w-1 h-1 rounded-full bg-border dark:bg-white/20 group-hover:bg-secondary dark:hover:bg-icon transition-all"></span>
+                الفتوق وجدار البطن المجهري</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث: روابط الشفافية والمراجع -->
+        <div class="space-y-4">
+          <h4
+            class="text-xs font-bold text-secondary dark:text-icon uppercase tracking-wider relative pb-2 after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-6 after:h-[2px] after:bg-secondary dark:after:bg-icon">
+            المرجع والمعايير
+          </h4>
+          <ul class="space-y-3 text-sm font-medium pt-1">
+            <li>
+              <a href="#"
+                class="text-primary/80 dark:text-gray-300 hover:text-button dark:hover:text-icon transition-colors flex items-center gap-2 group"><span
+                  class="w-1 h-1 rounded-full bg-border dark:bg-white/20 group-hover:bg-secondary dark:group-hover:bg-icon transition-all"></span>
+                السجل الطبي للمريض</a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-primary/80 dark:text-gray-300 hover:text-button dark:hover:text-icon transition-colors flex items-center gap-2 group"><span
+                  class="w-1 h-1 rounded-full bg-border dark:bg-white/20 group-hover:bg-secondary dark:group-hover:bg-icon transition-all"></span>
+                بروتوكول مكافحة العدوى</a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-primary/80 dark:text-gray-300 hover:text-button dark:hover:text-icon transition-colors flex items-center gap-2 group"><span
+                  class="w-1 h-1 rounded-full bg-border dark:bg-white/20 group-hover:bg-secondary dark:group-hover:bg-icon transition-all"></span>
+                الأسئلة الطبية الشائعة</a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-primary/80 dark:text-gray-300 hover:text-button dark:hover:text-icon transition-colors flex items-center gap-2 group"><span
+                  class="w-1 h-1 rounded-full bg-border dark:bg-white/20 group-hover:bg-secondary dark:hover:bg-icon transition-all"></span>
+                حقوق ومسؤوليات المراجع</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- العمود الرابع: معلومات التوجيه والموقع الجغرافي السريع -->
+        <div class="space-y-4">
+          <h4
+            class="text-xs font-bold text-secondary dark:text-icon uppercase tracking-wider relative pb-2 after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-6 after:h-[2px] after:bg-secondary dark:after:bg-icon">
+            العنوان المعتمد
+          </h4>
+          <div class="space-y-3 pt-1">
+            <div
+              class="flex items-start gap-3 bg-input/20 dark:bg-[#00265C]/40 p-3.5 rounded-xl border border-border/50 dark:border-white/5">
+              <i class="fa-solid fa-map-pin text-secondary dark:text-icon text-sm mt-0.5 shrink-0"></i>
+              <span class="text-xs text-primary/80 dark:text-gray-300 leading-relaxed">برج النخبة الطبي، الطابق الخامس،
+                جناح رقم 502</span>
+            </div>
+            <div
+              class="flex items-center gap-3 bg-input/20 dark:bg-[#00265C]/40 p-3.5 rounded-xl border border-border/50 dark:border-white/5">
+              <i class="fa-solid fa-clock text-secondary dark:text-icon text-sm shrink-0"></i>
+              <span class="text-xs text-primary/80 dark:text-gray-300">السبت - الأربعاء (9:00 ص - 9:00 م)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- الطبقة الثالثة والأخيرة: الحقوق والخصوصية التكنولوجية المعززة -->
+      <div
+        class="py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] font-medium text-primary/60 dark:text-white/50 text-center md:text-right ">
+        <!-- حقوق النشر -->
+        <p class="font-secondary">
+          © 2026 صرح الدكتور عمار السايح الطبي. جميع الحقوق القانونية والفكرية
+          محفوظة.
+        </p>
+
+        <!-- كبسولات الحماية والروابط القانونية -->
+        <div class="flex flex-wrap items-center justify-center gap-4 font-secondary">
+          <a href="#" class="hover:text-button dark:hover:text-icon transition-colors">سياسة الخصوصية</a>
+          <span class="opacity-30">|</span>
+          <a href="#" class="hover:text-button dark:hover:text-icon transition-colors">شروط الاستخدام</a>
+          <span class="opacity-30">|</span>
+          <div
+            class="flex items-center gap-1.5 bg-input/60 dark:bg-white/5 px-3 py-1 rounded-md border border-border dark:border-white/10 text-primary dark:text-icon">
+            <i class="fa-solid fa-shield-cat text-[10px]"></i>
+            <span class="text-[9px] font-bold uppercase tracking-wide text-primary/80 dark:text-white">HIPAA Secure
+              System</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+  <script src="../src/js/book.js"></script>
+  <script src="../src/js/script.js"></script>
+</body>
+
+</html>

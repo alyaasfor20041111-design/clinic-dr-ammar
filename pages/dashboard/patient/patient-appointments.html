@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en" class="dark" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مواعيدي</title>
+  <!-- font awesome icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="icon" type="image/x-icon" href="../../../src/images/icon.png" />
+  <link href="../../../src/output.css" rel="stylesheet" />
+</head>
+
+<body
+  class="bg-background dark:bg-[#001D47] text-primary dark:text-white font-primary min-h-screen flex overflow-hidden transition-colors duration-300">
+
+<aside class="w-[280px] bg-white dark:bg-[#00265C] border-l border-border dark:border-white/10 flex flex-col justify-between hidden lg:flex z-50 shadow-sm">
+  <div>
+    <div class="p-6 border-b border-border dark:border-white/10 flex items-center gap-3">
+      <img src="../../../src/images/logo.png" alt="Logo" class="w-10 h-auto" />
+      <div class="text-right">
+        <span class="block text-primary dark:text-white font-bold text-base leading-none">بوابة المريض</span>
+        <span class="text-secondary dark:text-icon text-[11px] font-secondary font-semibold">الملف الشخصي</span>
+      </div>
+    </div>
+
+    <nav class="p-4 space-y-2 font-secondary">
+      
+      <a href="patient-dashboard.html" class="flex items-center gap-3 px-4 py-3 bg-card dark:bg-[#003A87] text-primary dark:text-white font-bold text-sm rounded-xl border border-primary/5 dark:border-white/5 transition-all">
+        <i class="fa-solid fa-house text-secondary dark:text-icon text-base"></i>
+        <span>الرئيسية</span>
+      </a>
+
+      <a href="patient-appointments.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white font-medium text-sm rounded-xl border border-transparent hover:border-border dark:hover:border-white/10 transition-all">
+        <i class="fa-solid fa-calendar-check text-secondary dark:text-icon text-base"></i>
+        <span>مواعيدي </span>
+      </a>
+
+      <a href="patient-records.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white font-medium text-sm rounded-xl border border-transparent hover:border-border dark:hover:border-white/10 transition-all">
+        <i class="fa-solid fa-file-medical text-secondary dark:text-icon text-base"></i>
+        <span>سجلي الطبي</span>
+      </a>
+      <a href="patient-files.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white font-medium text-sm rounded-xl border border-transparent hover:border-border dark:hover:border-white/10 transition-all">
+          <i class="fa-solid fa-folder-open text-secondary dark:text-icon text-base"></i>
+          <span>الملفات المرفوعة</span>
+        </a>
+
+      <a href="patient-notifications.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white font-medium text-sm rounded-xl border border-transparent hover:border-border dark:hover:border-white/10 transition-all">
+        <i class="fa-solid fa-bell text-secondary dark:text-icon text-base"></i>
+        <span>الإشعارات</span>
+      </a>
+      <a href="patient-contact.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white font-medium text-sm rounded-xl border border-transparent hover:border-border dark:hover:border-white/10 transition-all">
+          <i class="fa-solid fa-comments text-secondary dark:text-icon text-base"></i>
+          <span>تواصل معنا</span>
+        </a>
+
+      
+    </nav>
+  </div>
+
+  <div class="p-4 border-t border-border dark:border-white/10 bg-input/30 dark:bg-[#001D47]/30 font-secondary">
+    <div class="flex items-center gap-3 mb-3">
+      <img src="../../../src/images/dr.png" alt="الدكتور عمار السايح" class="w-12 h-12 rounded-xl object-cover border border-secondary/30" />
+      <div class="text-right">
+        <h4 class="text-xs font-bold text-primary dark:text-white">د. عمار السايح</h4>
+        <p class="text-[10px] text-gray-500 dark:text-gray-400">جراحة عامة</p>
+      </div>
+    </div>
+    
+    <div class="space-y-1.5 text-[11px] text-gray-600 dark:text-gray-300 bg-white dark:bg-[#00265C] p-2.5 rounded-xl border border-border dark:border-white/5">
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-clock text-secondary dark:text-icon text-xs"></i>
+        <span>الدوام: 04:00 م - 10:00 م</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-location-dot text-secondary dark:text-icon text-xs"></i>
+        <span>العيادة الرئيسية - الطابق 3</span>
+      </div>
+    </div>
+  </div>
+</aside>
+
+  <div class="flex-1 flex flex-col h-screen overflow-hidden">
+
+    <header
+      class="bg-white dark:bg-[#00265C] border-b border-border dark:border-white/10 h-16 flex items-center justify-between px-6 md:px-8 shrink-0 shadow-sm z-40">
+      <div class="flex items-center gap-4">
+        <button id="mobile-sidebar-toggle"
+          class="lg:hidden w-10 h-10 flex items-center justify-center text-primary dark:text-white bg-input dark:bg-[#003175] rounded-xl border border-border dark:border-white/10">
+          <i class="fa-solid fa-bars-staggered text-lg"></i>
+        </button>
+        <h2 class="text-lg font-bold text-primary dark:text-white hidden sm:block">مواعيدي</h2>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <button id="theme-toggle" type="button"
+          class="text-primary dark:text-gray-300 hover:bg-input dark:hover:bg-white/5 focus:outline-none rounded-xl text-sm p-2.5 border border-border dark:border-white/10 transition-all">
+          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414z"
+              fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+
+        <div
+          class="flex items-center gap-2 bg-input dark:bg-[#003175] px-3 py-1.5 rounded-xl border border-border dark:border-white/10">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-icon opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-icon"></span>
+          </span>
+          <span class="text-[11px] font-bold text-primary dark:text-white font-secondary">النظام متصل</span>
+        </div>
+      </div>
+    </header>
+
+  <main class="flex-1 overflow-y-auto p-6 md:p-8 space-y-8">
+
+      <div class="flex flex-wrap gap-2 font-secondary text-xs">
+        <button class="px-4 py-2 bg-primary text-white dark:bg-[#003A87] rounded-xl font-bold shadow-sm">الكل</button>
+        <button class="px-4 py-2 bg-white dark:bg-[#00265C] text-gray-500 dark:text-gray-300 rounded-xl border border-border dark:border-white/5 hover:text-primary transition-all">المواعيد الحالية</button>
+        <button class="px-4 py-2 bg-white dark:bg-[#00265C] text-gray-500 dark:text-gray-300 rounded-xl border border-border dark:border-white/5 hover:text-primary transition-all">المواعيد السابقة</button>
+      </div>
+
+      <section class="bg-white dark:bg-[#00265C] border border-border dark:border-white/10 rounded-2xl shadow-sm overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-right border-collapse font-secondary text-sm">
+            <thead>
+              <tr class="bg-input/40 dark:bg-[#001D47]/40 border-b border-border dark:border-white/5 text-gray-600 dark:text-gray-300 text-xs font-bold">
+                <th class="p-4">العيادة والطبيب</th>
+                <th class="p-4">التاريخ والوقت</th>
+                <th class="p-4">حالة الموعد</th>
+                <th class="p-4 text-left">التصنيف</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border/60 dark:divide-white/5">
+              
+              <tr class="hover:bg-input/10 dark:hover:bg-[#003175]/20 transition-colors">
+                <td class="p-4">
+                  <div class="font-bold text-primary dark:text-white">د. عمار السايح</div>
+                  <div class="text-[11px] text-gray-400 mt-0.5">عيادة الجراحة العامة</div>
+                </td>
+                <td class="p-4 text-xs font-medium text-gray-700 dark:text-gray-300">16 يونيو 2026 - 05:00 م</td>
+                <td class="p-4">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/10 text-amber-600 dark:text-amber-400">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> قيد الانتظار
+                  </span>
+                </td>
+                <td class="p-4 text-left text-xs text-gray-400 font-medium">حالي</td>
+              </tr>
+
+              <tr class="hover:bg-input/10 dark:hover:bg-[#003175]/20 transition-colors">
+                <td class="p-4">
+                  <div class="font-bold text-primary dark:text-white">د. عمار السايح</div>
+                  <div class="text-[11px] text-gray-400 mt-0.5">عيادة الجراحة العامة</div>
+                </td>
+                <td class="p-4 text-xs font-medium text-gray-700 dark:text-gray-300">13 يونيو 2026 - 04:30 م</td>
+                <td class="p-4">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> مؤكد
+                  </span>
+                </td>
+                <td class="p-4 text-left text-xs text-gray-400 font-medium">حالي (اليوم)</td>
+              </tr>
+
+              <tr class="hover:bg-input/10 dark:hover:bg-[#003175]/20 transition-colors">
+                <td class="p-4">
+                  <div class="font-bold text-primary dark:text-white">د. عمار السايح</div>
+                  <div class="text-[11px] text-gray-400 mt-0.5">عيادة الجراحة العامة</div>
+                </td>
+                <td class="p-4 text-xs font-medium text-gray-700 dark:text-gray-300">08 يونيو 2026 - 06:00 م</td>
+                <td class="p-4">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400">
+                    <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> مرفوض
+                  </span>
+                </td>
+                <td class="p-4 text-left text-xs text-gray-400 font-medium">سابق</td>
+              </tr>
+
+              <tr class="hover:bg-input/10 dark:hover:bg-[#003175]/20 transition-colors">
+                <td class="p-4">
+                  <div class="font-bold text-primary dark:text-white">د. عمار السايح</div>
+                  <div class="text-[11px] text-gray-400 mt-0.5">عيادة الجراحة العامة</div>
+                </td>
+                <td class="p-4 text-xs font-medium text-gray-700 dark:text-gray-300">01 يونيو 2026 - 04:00 م</td>
+                <td class="p-4">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-sky-500/10 text-sky-600 dark:text-sky-400">
+                    <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span> تم الحضور
+                  </span>
+                </td>
+                <td class="p-4 text-left text-xs text-gray-400 font-medium">سابق</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+  </div>
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+  <script src="../../../src/js/script.js"></script>
+  <script src="../../../src/js/book.js"></script>
+  
+
+</body>
+
+</html>

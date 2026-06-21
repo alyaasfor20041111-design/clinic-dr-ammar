@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+
+ /* حل جذري لكل العناصر */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    /* لمنع التمرير المطاطي في آيفون */
+    touch-action: pan-y;
+    scroll-behavior: smooth;
+}
+
+@theme {
+  /* --- ألوان العناوين والنصوص --- */
+  --color-primary: #004aad;
+  --color-secondary: #189f8e;
+
+  /* --- ألوان الخلفيات --- */
+  --color-background: #F4F7FA;
+  --color-bg-dark: #003A87;
+  --color-card: #D1E4FF;
+  --color-card-dark: #003175;      
+
+  /* --- العناصر التفاعلية (أزرار ومدخلات) --- */
+  --color-button: #003A87;
+  --color-button-hover: #004aad;
+  --color-button-title: #476B65;
+ 
+  
+  --color-icon: #21EAC8;
+  --color-input: #E5F0FF;
+  --color-input-dark: #21EAC8;      /* خلفية البحث في الوضع الليلي */
+
+  /* --- الحدود والظلال (Borders & Shadows) --- */
+  --color-border: #DEE4ED;
+  --color-border-dark: #75AFFF;
+
+  /* --- الخطوط (Typography) --- */
+  --font-primary: 'Tajawal';
+  --font-secondary: 'IBM Plex Sans Arabic';
+
+  /* --- أحجام النصوص --- */
+  --text-primary: 30px;
+  --text-secondary: 12px;
+
+}

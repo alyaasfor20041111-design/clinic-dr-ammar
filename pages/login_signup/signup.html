@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en" class="dark" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إنشاء حسابك</title>
+    <!-- font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="icon" type="image/x-icon" href="../../src/images/icon.png" />
+    <link href="../../src/output.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="absolute top-6 right-6 z-[160]  ">
+        <button id="theme-toggle" type="button"
+            class="text-primary dark:text-gray-300 hover:bg-input dark:hover:bg-white/5 focus:outline-none rounded-xl text-sm p-2.5 border border-border dark:border-white/10 transition-all">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414z"
+                    fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+        </button>
+    </div>
+    <div id="mobile-sidebar" class="fixed inset-0 z-[150] pointer-events-none font-primary">
+        <div id="sidebar-overlay"
+            class="absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0 transition-opacity duration-300 ease-in-out">
+        </div>
+
+        <div id="sidebar-content"
+            class="absolute top-0 right-0 w-[300px] h-full bg-background dark:bg-[#001D47] shadow-2xl border-l border-border/40 dark:border-white/10 translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between">
+            <div class="p-6 border-b border-border/40 dark:border-white/10 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <img src="../src/images/logo.png" alt="Logo" class="w-10 h-auto" />
+                    <div class="text-right">
+                        <span class="block text-primary dark:text-white font-bold text-sm leading-none">د. عمار
+                            السايح</span>
+                    </div>
+                </div>
+                <button id="sidebar-close-button"
+                    class="w-9 h-9 flex items-center justify-center rounded-xl bg-input dark:bg-[#00265C] text-primary dark:text-white border border-border dark:border-white/10">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <div class="p-6 flex-1 overflow-y-auto">
+                <ul class="space-y-3 font-secondary">
+                    <li>
+                        <a href="#"
+                            class="flex items-center gap-3 px-4 py-3 text-primary dark:text-white font-bold text-sm bg-card dark:bg-[#003A87] rounded-xl transition-all">
+                            <i class="fa-solid fa-house text-secondary dark:text-icon"></i>
+                            <span>الرئيسية</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="flex items-center gap-3 px-4 py-3 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-sm hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
+                            <i class="fa-solid fa-stethoscope text-secondary dark:text-icon"></i>
+                            <span>الخدمات الطبية</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="flex items-center gap-3 px-4 py-3 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-sm hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
+                            <i class="fa-solid fa-user-doctor text-secondary dark:text-icon"></i>
+                            <span>أطباؤنا</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="flex items-center gap-3 px-4 py-3 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-sm hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
+                            <i class="fa-solid fa-hospital text-secondary dark:text-icon"></i>
+                            <span>عن العيادة</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="my-6 border-t border-border/40 dark:border-white/10 pt-6 space-y-4">
+                    <a href="#"
+                        class="flex items-center justify-center text-center bg-card dark:bg-[#003175] text-primary dark:text-white px-5 py-3 rounded-xl font-bold text-sm border border-primary/10 transition-all">
+                        بوابة المرضى
+                    </a>
+                    <a href="#"
+                        class="flex items-center justify-center text-center bg-button dark:bg-secondary text-white dark:text-[#001D47] px-5 py-3 rounded-xl font-bold text-sm shadow-md transition-all">
+                        احجز موعداً فوريًا
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="p-6 border-t border-border/40 dark:border-white/10 bg-input/30 dark:bg-[#00265C]/20 flex items-center justify-between">
+                <span class="text-xs font-bold text-gray-500 dark:text-gray-400 font-secondary">مظهر التطبيق</span>
+                <button id="theme-toggle-mobile" type="button"
+                    class="text-primary dark:text-icon bg-white dark:bg-[#00265C] border border-border dark:border-white/10 rounded-xl text-sm p-2.5 shadow-sm">
+                    <i class="fa-solid fa-moon dark:hidden"></i>
+                    <i class="fa-solid fa-sun hidden dark:block"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <main
+        class="min-h-screen bg-background dark:bg-[#001D47] text-primary dark:text-white transition-colors duration-300 pt-28 pb-20 font-secondary"
+        dir="rtl">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8 relative z-10">
+
+            <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
+                <span
+                    class="inline-block bg-input dark:bg-[#00265C] border border-border/60 dark:border-white/10 text-secondary dark:text-icon text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
+                    بوابة العيادة الرقمية
+                </span>
+                <h1 class="text-2xl sm:text-3xl font-primary font-bold text-primary dark:text-white leading-tight">
+                    إنشاء حساب رقمي جديد
+                </h1>
+                <p class="text-primary/70 dark:text-gray-300 text-xs sm:text-sm">
+                    يرجى تحديد نوع الحساب وإدخال البيانات المطلوبة بدقة للانضمام إلى المنصة الطبية.
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <form id="register-account-form"
+                    class="bg-white dark:bg-[#001D47] border border-border/40 dark:border-white/10 rounded-[1.5rem] p-6 sm:p-8 md:p-10 space-y-6">
+
+                    <div class="space-y-4">
+                        <h3
+                            class="text-sm sm:text-base font-primary font-bold text-primary dark:text-white flex items-center gap-2">
+                            <i class="fa-solid fa-users text-secondary dark:text-icon"></i>
+                            تحديد نوع الحساب (الدور)
+                        </h3>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <label
+                                class="relative flex items-center justify-between p-4 rounded-xl border border-border/60 dark:border-white/10 bg-input/10 dark:bg-[#00265C]/20 cursor-pointer hover:border-button dark:hover:border-icon transition-all group">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-8 h-8 flex items-center justify-center rounded-lg bg-input dark:bg-[#00265C] text-secondary dark:text-icon">
+                                        <i class="fa-solid fa-user-injured text-sm"></i>
+                                    </div>
+                                    <span class="text-xs font-bold text-primary dark:text-white">مريض</span>
+                                </div>
+                                <input type="radio" name="user-role" value="patient"
+                                    class="accent-button dark:accent-icon h-4 w-4" checked required />
+                            </label>
+
+                            <label
+                                class="relative flex items-center justify-between p-4 rounded-xl border border-border/60 dark:border-white/10 bg-input/10 dark:bg-[#00265C]/20 cursor-pointer hover:border-button dark:hover:border-icon transition-all group">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-8 h-8 flex items-center justify-center rounded-lg bg-input dark:bg-[#00265C] text-secondary dark:text-icon">
+                                        <i class="fa-solid fa-user-doctor text-sm"></i>
+                                    </div>
+                                    <span class="text-xs font-bold text-primary dark:text-white">طبيب</span>
+                                </div>
+                                <input type="radio" name="user-role" value="doctor"
+                                    class="accent-button dark:accent-icon h-4 w-4" required />
+                            </label>
+
+                            <label
+                                class="relative flex items-center justify-between p-4 rounded-xl border border-border/60 dark:border-white/10 bg-input/10 dark:bg-[#00265C]/20 cursor-pointer hover:border-button dark:hover:border-icon transition-all group">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-8 h-8 flex items-center justify-center rounded-lg bg-input dark:bg-[#00265C] text-secondary dark:text-icon">
+                                        <i class="fa-solid fa-user-tie text-sm"></i>
+                                    </div>
+                                    <span class="text-xs font-bold text-primary dark:text-white">سكرتير / سكرتيرة</span>
+                                </div>
+                                <input type="radio" name="user-role" value="secretary"
+                                    class="accent-button dark:accent-icon h-4 w-4" required />
+                            </label>
+                        </div>
+                    </div>
+
+                    <hr class="border-border/40 dark:border-white/5" />
+
+                    <div class="space-y-4">
+                        <h3 id="section-info-title"
+                            class="text-sm sm:text-base font-primary font-bold text-primary dark:text-white flex items-center gap-2">
+                            <i id="section-info-icon"
+                                class="fa-solid fa-user-injured text-secondary dark:text-icon"></i>
+                            <span>البيانات الشخصية للمريض</span>
+                        </h3>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="space-y-1.5">
+                                <label id="lbl-name"
+                                    class="text-xs font-bold text-primary/70 dark:text-gray-300 block">الاسم الكامل
+                                    الثلاثي:</label>
+                                <input type="text" id="reg-name" placeholder="محمد عبد الله العتيبي"
+                                    class="w-full bg-input/50 dark:bg-[#00265C]/50 border border-border/60 dark:border-white/10 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-button dark:focus:border-icon transition-colors text-right"
+                                    required />
+                            </div>
+
+                            <div class="space-y-1.5">
+                                <label class="text-xs font-bold text-primary/70 dark:text-gray-300 block">رقم
+                                    الجوال:</label>
+                                <input type="tel" id="reg-phone" placeholder="05xxxxxxxx"
+                                    class="w-full bg-input/50 dark:bg-[#00265C]/50 border border-border/60 dark:border-white/10 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-button dark:focus:border-icon transition-colors text-left"
+                                    dir="ltr" required />
+                            </div>
+
+                            <div id="dynamic-field-1" class="space-y-1.5">
+                                <label id="lbl-dynamic-1"
+                                    class="text-xs font-bold text-primary/70 dark:text-gray-300 block">العمر:</label>
+                                <input type="number" id="reg-dynamic-1" placeholder="مثال: 35"
+                                    class="w-full bg-input/50 dark:bg-[#00265C]/50 border border-border/60 dark:border-white/10 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-button dark:focus:border-icon transition-colors text-right"
+                                    required />
+                            </div>
+
+                            <div id="dynamic-field-2" class="space-y-1.5">
+                                <label id="lbl-dynamic-2"
+                                    class="text-xs font-bold text-primary/70 dark:text-gray-300 block">الجنس:</label>
+                                <div class="relative">
+                                    <select id="reg-dynamic-2"
+                                        class="w-full bg-input/50 dark:bg-[#00265C]/50 border border-border/60 dark:border-white/10 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:border-button dark:focus:border-icon transition-colors text-right appearance-none"
+                                        required>
+                                        <option value="" disabled selected>اختر الجنس</option>
+                                        <option value="male">ذكر</option>
+                                        <option value="female">أنثى</option>
+                                    </select>
+                                    <div
+                                        class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-4 text-primary/50 dark:text-white/50">
+                                        <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-1.5 md:col-span-2">
+                                <label class="text-xs font-bold text-primary/70 dark:text-gray-300 block">البريد
+                                    الإلكتروني:</label>
+                                <input type="email" id="reg-email" placeholder="example@domain.com"
+                                    class="w-full bg-input/50 dark:bg-[#00265C]/50 border border-border/60 dark:border-white/10 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-button dark:focus:border-icon transition-colors text-left"
+                                    dir="ltr" required />
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-border/40 dark:border-white/5" />
+
+                    <div class="space-y-4">
+                        <h3
+                            class="text-sm sm:text-base font-primary font-bold text-primary dark:text-white flex items-center gap-2">
+                            <i class="fa-solid fa-lock text-secondary dark:text-icon"></i>
+                            إعدادات الأمان وحماية الحساب
+                        </h3>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="space-y-1.5">
+                                <label class="text-xs font-bold text-primary/70 dark:text-gray-300 block">كلمة
+                                    المرور:</label>
+                                <input type="password" id="reg-password" placeholder="••••••••"
+                                    class="w-full bg-input/50 dark:bg-[#00265C]/50 border border-border/60 dark:border-white/10 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-button dark:focus:border-icon transition-colors text-left"
+                                    dir="ltr" required />
+                            </div>
+
+                            <div class="space-y-1.5">
+                                <label class="text-xs font-bold text-primary/70 dark:text-gray-300 block">تأكيد كلمة
+                                    المرور:</label>
+                                <input type="password" id="reg-password-confirm" placeholder="••••••••"
+                                    class="w-full bg-input/50 dark:bg-[#00265C]/50 border border-border/60 dark:border-white/10 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-button dark:focus:border-icon transition-colors text-left"
+                                    dir="ltr" required />
+                            </div>
+                        </div>
+                        <p class="text-[10px] text-primary/60 dark:text-gray-400 text-right">💡 يرجى التأكد من اختيار
+                            كلمة مرور قوية تحتوي على أحرف وأرقام لحماية سجلاتك الطبية والأمنية.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                        <a href="../../index.html" id="btn-register-action"
+                            class="sm:col-span-2 bg-button dark:bg-secondary text-white dark:text-[#001D47] hover:bg-button-hover dark:hover:bg-icon py-3 rounded-xl font-primary font-bold text-xs sm:text-sm transition-all shadow-md active:scale-[0.99] flex items-center justify-center gap-2 cursor-pointer">
+                            <i class="fa-solid fa-user-plus text-xs"></i>
+                            <span>إنشاء الحساب</span>
+                        </a>
+
+                        <a href="./login.html" id="btn-login-redirect"
+                            class="bg-slate-100 dark:bg-white/5 text-primary/80 dark:text-gray-300 hover:bg-slate-200 dark:hover:bg-white/10 py-3 rounded-xl font-primary font-bold text-xs sm:text-sm transition-all active:scale-[0.99] text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-right-to-bracket text-xs"></i>
+                            <span>تسجيل الدخول</span>
+                        </a>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </main>
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="../src/js/book.js"></script>
+    <script src="../../src/js/login_signup.js"></script>
+    <script src="../../src/js/script.js"></script>
+</body>
+
+</html>

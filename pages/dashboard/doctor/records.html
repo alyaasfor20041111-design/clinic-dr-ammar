@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en" class="dark" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>السجلات الطبية</title>
+  <!-- font awesome icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="icon" type="image/x-icon" href="../../../src/output.css" />
+  <link href="../../../src/output.css" rel="stylesheet" />
+</head>
+
+<body
+  class="bg-background dark:bg-[#001D47] text-primary dark:text-white font-primary min-h-screen flex overflow-hidden transition-colors duration-300">
+
+   <aside
+    class="w-[280px] bg-white dark:bg-[#00265C] border-l border-border dark:border-white/10 flex flex-col justify-between hidden lg:flex z-50 shadow-sm">
+    <div>
+      <div class="p-6 border-b border-border dark:border-white/10 flex items-center gap-3">
+        <img src="../../../src/images/logo.png" alt="Logo" class="w-10 h-auto" />
+        <div class="text-right">
+          <span class="block text-primary dark:text-white font-bold text-base leading-none">بوابة الطبيب</span>
+          <span class="text-secondary dark:text-icon text-[11px] font-secondary font-semibold">د. عمار السايح</span>
+        </div>
+      </div>
+
+      <nav class="p-4 space-y-2 font-secondary">
+        <a href="doctor-dashboard.html"
+          class="flex items-center gap-3 px-4 py-3 bg-card dark:bg-[#003A87] text-primary dark:text-white font-bold text-sm rounded-xl transition-all">
+          <i class="fa-solid fa-house text-secondary dark:text-icon text-base"></i>
+          <span>الرئيسية</span>
+        </a>
+        <a href="patients.html"
+          class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white font-medium text-sm rounded-xl border border-transparent hover:border-border dark:hover:border-white/10 transition-all">
+          <i class="fa-solid fa-user-injured text-secondary dark:text-icon text-base"></i>
+          <span>قائمة المرضى الحالية</span>
+        </a>
+        <a href="records.html"
+          class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white font-medium text-sm rounded-xl border border-transparent hover:border-border dark:hover:border-white/10 transition-all">
+          <i class="fa-solid fa-folder-open text-secondary dark:text-icon text-base"></i>
+          <span>السجلات الطبية</span>
+        </a>
+        <a href="schedule.html"
+          class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white font-medium text-sm rounded-xl border border-transparent hover:border-border dark:hover:border-white/10 transition-all">
+          <i class="fa-solid fa-calendar-days text-secondary dark:text-icon text-base"></i>
+          <span>جدول المواعيد</span>
+        </a>
+      </nav>
+    </div>
+
+     <div class="p-4 border-t border-border dark:border-white/10 bg-input/30 dark:bg-[#001D47]/30 font-secondary">
+    <div class="flex items-center gap-3 mb-3">
+      <img src="../../../src/images/dr.png" alt="الدكتور عمار السايح" class="w-12 h-12 rounded-xl object-cover border border-secondary/30" />
+      <div class="text-right">
+        <h4 class="text-xs font-bold text-primary dark:text-white">د. عمار السايح</h4>
+        <p class="text-[10px] text-gray-500 dark:text-gray-400">جراحة عامة</p>
+      </div>
+    </div>
+    
+    <div class="space-y-1.5 text-[11px] text-gray-600 dark:text-gray-300 bg-white dark:bg-[#00265C] p-2.5 rounded-xl border border-border dark:border-white/5">
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-clock text-secondary dark:text-icon text-xs"></i>
+        <span>الدوام: 04:00 م - 10:00 م</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-location-dot text-secondary dark:text-icon text-xs"></i>
+        <span>العيادة الرئيسية - الطابق 3</span>
+      </div>
+    </div>
+  </div>
+  </aside>
+
+  <div class="flex-1 flex flex-col h-screen overflow-hidden">
+
+    <header
+      class="bg-white dark:bg-[#00265C] border-b border-border dark:border-white/10 h-16 flex items-center justify-between px-6 md:px-8 shrink-0 shadow-sm z-40">
+      <div class="flex items-center gap-4">
+        <button id="mobile-sidebar-toggle"
+          class="lg:hidden w-10 h-10 flex items-center justify-center text-primary dark:text-white bg-input dark:bg-[#003175] rounded-xl border border-border dark:border-white/10">
+          <i class="fa-solid fa-bars-staggered text-lg"></i>
+        </button>
+        <h2 class="text-lg font-bold text-primary dark:text-white hidden sm:block">السجلات الطبية</h2>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <button id="theme-toggle" type="button"
+          class="text-primary dark:text-gray-300 hover:bg-input dark:hover:bg-white/5 focus:outline-none rounded-xl text-sm p-2.5 border border-border dark:border-white/10 transition-all">
+          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414z"
+              fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+
+        <div
+          class="flex items-center gap-2 bg-input dark:bg-[#003175] px-3 py-1.5 rounded-xl border border-border dark:border-white/10">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-icon opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-icon"></span>
+          </span>
+          <span class="text-[11px] font-bold text-primary dark:text-white font-secondary">النظام متصل</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1 overflow-y-auto p-6 md:p-8 space-y-8">
+
+      <div class="bg-white dark:bg-[#00265C] border border-border dark:border-white/10 p-5 rounded-2xl shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 bg-input dark:bg-[#003175] text-secondary dark:text-icon rounded-xl flex items-center justify-center text-xl">
+            <i class="fa-solid fa-id-card"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-base text-primary dark:text-white">أحمد عبد الله المري</h3>
+            <p class="text-xs font-secondary text-gray-500 dark:text-gray-400 mt-1">العمر: 34 سنة | الجنس: ذكر | فصيلة الدم: O+</p>
+          </div>
+        </div>
+        <span class="text-xs font-secondary px-3 py-1.5 bg-card dark:bg-[#003A87] rounded-xl text-primary dark:text-white font-bold border border-primary/5">
+          الملف النشط حالياً
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div class="bg-white dark:bg-[#00265C] border border-border dark:border-white/10 p-5 rounded-2xl shadow-sm space-y-4">
+          <div class="flex items-center gap-2.5 border-b border-border dark:border-white/5 pb-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-sm">
+              <i class="fa-solid fa-flask-vial"></i>
+            </div>
+            <h4 class="font-bold text-sm text-primary dark:text-white">التحاليل الطبية المخبرية</h4>
+          </div>
+          <ul class="space-y-2.5 font-secondary text-xs text-gray-600 dark:text-gray-300">
+            <li class="flex items-center justify-between p-2 bg-background dark:bg-[#001D47]/40 rounded-xl">
+              <span><i class="fa-regular fa-circle-check ml-1.5 text-emerald-500"></i> فحص الدم الكامل (CBC)</span>
+              <span class="font-bold text-[11px] text-gray-400">منذ يومين</span>
+            </li>
+            <li class="flex items-center justify-between p-2 bg-background dark:bg-[#001D47]/40 rounded-xl">
+              <span><i class="fa-regular fa-circle-check ml-1.5 text-emerald-500"></i> اختبار وظائف الكبد والكلى</span>
+              <span class="font-bold text-[11px] text-gray-400">منذ يومين</span>
+            </li>
+            <li class="flex items-center justify-between p-2 bg-background dark:bg-[#001D47]/40 rounded-xl">
+              <span><i class="fa-regular fa-circle-check ml-1.5 text-emerald-500"></i> معدل السكر التراكمي (HbA1c)</span>
+              <span class="font-bold text-[11px] text-gray-400">أسبوع مضى</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white dark:bg-[#00265C] border border-border dark:border-white/10 p-5 rounded-2xl shadow-sm space-y-4">
+          <div class="flex items-center gap-2.5 border-b border-border dark:border-white/5 pb-3">
+            <div class="w-8 h-8 rounded-lg bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-sm">
+              <i class="fa-solid fa-x-ray"></i>
+            </div>
+            <h4 class="font-bold text-sm text-primary dark:text-white">تقارير الأشعة والتصوير</h4>
+          </div>
+          <ul class="space-y-2.5 font-secondary text-xs text-gray-600 dark:text-gray-300">
+            <li class="flex items-center justify-between p-2 bg-background dark:bg-[#001D47]/40 rounded-xl">
+              <span><i class="fa-regular fa-file-image ml-1.5 text-indigo-500"></i> أشعة تلفزيونية للبطن والموجات</span>
+              <span class="font-bold text-[11px] text-gray-400">عرض التقرير</span>
+            </li>
+            <li class="flex items-center justify-between p-2 bg-background dark:bg-[#001D47]/40 rounded-xl">
+              <span><i class="fa-regular fa-file-image ml-1.5 text-indigo-500"></i> أشعة سينية الصدر (X-Ray)</span>
+              <span class="font-bold text-[11px] text-gray-400">مؤرشف 2025</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white dark:bg-[#00265C] border border-border dark:border-white/10 p-5 rounded-2xl shadow-sm space-y-4">
+          <div class="flex items-center gap-2.5 border-b border-border dark:border-white/5 pb-3">
+            <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center text-sm">
+              <i class="fa-solid fa-notes-medical"></i>
+            </div>
+            <h4 class="font-bold text-sm text-primary dark:text-white">التاريخ المرضي الشامل</h4>
+          </div>
+          <div class="p-3 bg-background dark:bg-[#001D47]/40 rounded-xl font-secondary text-xs text-gray-600 dark:text-gray-300 leading-relaxed space-y-2">
+            <p>• تم إجراء عملية استئصال الزائدة الدودية بنجاح عام 2022.</p>
+            <p>• لا توجد أي حساسية دوائية مسجلة ضد البنسلين أو مشتقاته.</p>
+            <p>• تاريخ عائلي خفيف مع ارتفاع ضغط الدم الشرياني.</p>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-[#00265C] border border-border dark:border-white/10 p-5 rounded-2xl shadow-sm space-y-4">
+          <div class="flex items-center gap-2.5 border-b border-border dark:border-white/5 pb-3">
+            <div class="w-8 h-8 rounded-lg bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center text-sm">
+              <i class="fa-solid fa-comment-medical"></i>
+            </div>
+            <h4 class="font-bold text-sm text-primary dark:text-white">ملاحظات السكرتارية والاستقبال</h4>
+          </div>
+          <div class="p-3.5 bg-background dark:bg-[#001D47]/40 rounded-xl font-secondary text-xs italic text-gray-500 dark:text-gray-400 border-r-4 border-secondary dark:border-icon">
+            "المريض أفاد عند مكتب الاستقبال أنه يعاني من آلام متقطعة في الجانب الأيمن منذ ليلة أمس، ويرغب في استلام تقرير طبي مختوم لتقديمه إلى جهة عمله غداً صباحاً."
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+  <script src="../../../src/js/script.js"></script>
+  <script src="../../../src/js/book.js"></script>
+  
+
+</body>
+
+</html>
