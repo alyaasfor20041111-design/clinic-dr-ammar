@@ -31,15 +31,18 @@
 </head>
 
 <body>
-<header class="sticky top-0 left-0 w-full z-[100] font-primary bg-background dark:bg-[#001D47] text-primary border-b border-border/40 dark:border-white/10 transition-all duration-300 shadow-sm">
-    <div class="hidden md:flex bg-bg-dark dark:bg-[#00265C] px-8 md:px-16 py-2.5 justify-between items-center border-b border-white/5">
+  <header
+    class="sticky top-0 left-0 w-full z-[100] font-primary bg-background dark:bg-[#001D47] text-primary border-b border-border/40 dark:border-white/10 transition-all duration-300 shadow-sm">
+    <div
+      class="hidden md:flex bg-bg-dark dark:bg-[#00265C] px-8 md:px-16 py-2.5 justify-between items-center border-b border-white/5">
       <div class="flex items-center gap-6">
         <div class="flex items-center gap-2.5">
           <span class="relative flex h-2.5 w-2.5">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-icon opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-icon"></span>
           </span>
-          <span class="text-white text-[11px] font-bold tracking-widest font-secondary">الطوارئ والاستشارات متوفرة 24/7</span>
+          <span class="text-white text-[11px] font-bold tracking-widest font-secondary">الطوارئ والاستشارات متوفرة
+            24/7</span>
         </div>
       </div>
 
@@ -49,7 +52,7 @@
         <a href="#" class="hover:text-icon transition-colors duration-300">الأسئلة الشائعة</a>
         <span class="opacity-30">|</span>
 
-         <button id="theme-toggle" type="button"
+        <button id="theme-toggle" type="button"
           class="text-white/80 dark:text-gray-300 hover:bg-white/10 dark:hover:bg-white/5 focus:outline-none focus:ring-4 focus:ring-white/10 rounded-lg text-sm p-1.5 transition-all">
 
           <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
@@ -82,33 +85,50 @@
           </div>
         </a>
 
-        <ul class="hidden lg:flex items-center gap-2 font-secondary bg-input/50 dark:bg-[#00265C]/50 p-1.5 rounded-full border border-border/60 dark:border-white/10">
-          <li><a href="#" class="px-6 py-2 text-primary dark:text-white font-bold text-sm bg-white dark:bg-[#003A87] shadow-sm rounded-full transition-all">الرئيسية</a></li>
-          <li><a href="#" class="px-6 py-2 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white rounded-full font-bold text-sm transition-all">عن العيادة</a></li>
-          <li><a href="#" class="px-6 py-2 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white rounded-full font-bold text-sm transition-all">موقعنا</a></li>
-          <li><a href="#" class="px-6 py-2 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white rounded-full font-bold text-sm transition-all">مراحل التحول والتعافي</a></li>
-          <li><a href="#" class="px-6 py-2 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white rounded-full font-bold text-sm transition-all">عن الطبيب</a></li>
-          
+        <ul
+          class="hidden lg:flex items-center gap-2 font-secondary bg-input/50 dark:bg-[#00265C]/50 p-1.5 rounded-full border border-border/60 dark:border-white/10">
+          <li><a href="#"
+              class="px-6 py-2 text-primary dark:text-white font-bold text-sm bg-white dark:bg-[#003A87] shadow-sm rounded-full transition-all">الرئيسية</a>
+          </li>
+          <li><a href="#"
+              class="px-6 py-2 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white rounded-full font-bold text-sm transition-all">عن
+              العيادة</a></li>
+          <li><a href="#"
+              class="px-6 py-2 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white rounded-full font-bold text-sm transition-all">موقعنا</a>
+          </li>
+          <li><a href="#"
+              class="px-6 py-2 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white rounded-full font-bold text-sm transition-all">مراحل
+              التحول والتعافي</a></li>
+          <li><a href="#"
+              class="px-6 py-2 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white rounded-full font-bold text-sm transition-all">عن
+              الطبيب</a></li>
+
           <li class="relative">
-            <button id="dropdownBtn" class="px-6 py-2 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white rounded-full font-bold text-sm transition-all flex items-center gap-2 focus:outline-none">
+            <button id="dropdownBtn"
+              class="px-6 py-2 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white rounded-full font-bold text-sm transition-all flex items-center gap-2 focus:outline-none">
               <span>لوحة التحكم</span>
-              <i id="dropdownArrow" class="fa-solid fa-chevron-down text-[10px] opacity-70 transition-transform duration-300"></i>
+              <i id="dropdownArrow"
+                class="fa-solid fa-chevron-down text-[10px] opacity-70 transition-transform duration-300"></i>
             </button>
-            <ul id="dropdownMenu" class="absolute right-0 top-full mt-1 w-48 bg-white dark:bg-[#00265C] border border-border dark:border-white/10 rounded-2xl shadow-xl py-2 hidden z-50">
+            <ul id="dropdownMenu"
+              class="absolute right-0 top-full mt-1 w-48 bg-white dark:bg-[#00265C] border border-border dark:border-white/10 rounded-2xl shadow-xl py-2 hidden z-50">
               <li>
-                <a href="../pages/dashboard/patient/patient-dashboard.html" class="flex items-center gap-2.5 px-4 py-2.5 text-xs font-secondary font-bold text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white transition-colors">
+                <a href="../pages/dashboard/patient/patient-dashboard.html"
+                  class="flex items-center gap-2.5 px-4 py-2.5 text-xs font-secondary font-bold text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white transition-colors">
                   <i class="fa-solid fa-user-injured text-sm text-gray-400 w-4 text-center"></i>
                   <span>بوابة المريض</span>
                 </a>
               </li>
               <li>
-                <a href="../pages/dashboard/doctor/doctor-dashboard.html" class="flex items-center gap-2.5 px-4 py-2.5 text-xs font-secondary font-bold text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white transition-colors">
+                <a href="../pages/dashboard/doctor/doctor-dashboard.html"
+                  class="flex items-center gap-2.5 px-4 py-2.5 text-xs font-secondary font-bold text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white transition-colors">
                   <i class="fa-solid fa-user-md text-sm text-gray-400 w-4 text-center"></i>
                   <span>بوابة الطبيب</span>
                 </a>
               </li>
               <li>
-                <a href="../pages/dashboard/secretary/secretary-dashboard.html" class="flex items-center gap-2.5 px-4 py-2.5 text-xs font-secondary font-bold text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white transition-colors">
+                <a href="../pages/dashboard/secretary/secretary-dashboard.html"
+                  class="flex items-center gap-2.5 px-4 py-2.5 text-xs font-secondary font-bold text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white transition-colors">
                   <i class="fa-solid fa-user-tie text-sm text-gray-400 w-4 text-center"></i>
                   <span>بوابة السكرتير</span>
                 </a>
@@ -118,13 +138,16 @@
         </ul>
 
         <div class="flex items-center gap-3">
-          <a href="../../pages/login_signup/login.html" class="hidden sm:inline-flex bg-card dark:bg-[#003175] text-primary dark:text-white hover:bg-primary hover:text-white px-5 py-2.5 rounded-xl font-bold text-xs transition-all border border-primary/10 dark:border-white/10">
+          <a href="../../pages/login_signup/login.html"
+            class="hidden sm:inline-flex bg-card dark:bg-[#003175] text-primary dark:text-white hover:bg-primary hover:text-white px-5 py-2.5 rounded-xl font-bold text-xs transition-all border border-primary/10 dark:border-white/10">
             تسجيل دخول / إنشاء حساب
           </a>
-          <a href="/pages/book.html" class="bg-button dark:bg-secondary text-white dark:text-[#001D47] hover:bg-button-hover dark:hover:bg-icon px-6 py-2.5 rounded-xl font-bold text-xs transition-all active:scale-95 shadow-lg shadow-button/20 dark:shadow-secondary/10 font-primary">
+          <a href="/pages/book.html"
+            class="bg-button dark:bg-secondary text-white dark:text-[#001D47] hover:bg-button-hover dark:hover:bg-icon px-6 py-2.5 rounded-xl font-bold text-xs transition-all active:scale-95 shadow-lg shadow-button/20 dark:shadow-secondary/10 font-primary">
             احجز موعداً فوريًا
           </a>
-          <button id="mobile-menu-button" class="lg:hidden flex items-center justify-center w-10 h-10 text-primary dark:text-white bg-input dark:bg-[#00265C] rounded-xl border border-border dark:border-white/10 transition-all active:scale-95">
+          <button id="mobile-menu-button"
+            class="lg:hidden flex items-center justify-center w-10 h-10 text-primary dark:text-white bg-input dark:bg-[#00265C] rounded-xl border border-border dark:border-white/10 transition-all active:scale-95">
             <i class="fa-solid fa-bars-staggered text-lg"></i>
           </button>
         </div>
@@ -133,10 +156,12 @@
   </header>
 
   <div id="mobile-sidebar" class="fixed inset-0 z-[150] pointer-events-none font-primary">
-    <div id="sidebar-overlay" class="absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0 transition-opacity duration-300 ease-in-out"></div>
+    <div id="sidebar-overlay"
+      class="absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0 transition-opacity duration-300 ease-in-out"></div>
 
-    <div id="sidebar-content" class="absolute top-0 right-0 w-[300px] h-full bg-background dark:bg-[#001D47] shadow-2xl border-l border-border/40 dark:border-white/10 translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between">
-      
+    <div id="sidebar-content"
+      class="absolute top-0 right-0 w-[300px] h-full bg-background dark:bg-[#001D47] shadow-2xl border-l border-border/40 dark:border-white/10 translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between">
+
       <div class="p-6 border-b border-border/40 dark:border-white/10 flex items-center justify-between">
         <div class="flex items-center gap-3">
           <img src="../src/images/logo.png" alt="Logo" class="w-10 h-auto" />
@@ -145,41 +170,49 @@
             <span class="text-secondary dark:text-icon text-[10px] font-semibold">للجراحة العامة</span>
           </div>
         </div>
-        <button id="sidebar-close-button" class="w-9 h-9 flex items-center justify-center rounded-xl bg-input dark:bg-[#00265C] text-primary dark:text-white border border-border dark:border-white/10">
+        <button id="sidebar-close-button"
+          class="w-9 h-9 flex items-center justify-center rounded-xl bg-input dark:bg-[#00265C] text-primary dark:text-white border border-border dark:border-white/10">
           <i class="fa-solid fa-xmark text-lg"></i>
         </button>
       </div>
 
       <div class="p-6 flex-1 overflow-y-auto space-y-6">
         <div>
-          <span class="block text-[11px] font-bold text-gray-400 dark:text-gray-500 mb-3 uppercase tracking-wider font-secondary">صفحات الموقع الأكاديمية</span>
+          <span
+            class="block text-[11px] font-bold text-gray-400 dark:text-gray-500 mb-3 uppercase tracking-wider font-secondary">صفحات
+            الموقع الأكاديمية</span>
           <ul class="space-y-2 font-secondary">
             <li>
-              <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-primary dark:text-white font-bold text-xs bg-card dark:bg-[#003A87] rounded-xl transition-all">
+              <a href="#"
+                class="flex items-center gap-3 px-4 py-2.5 text-primary dark:text-white font-bold text-xs bg-card dark:bg-[#003A87] rounded-xl transition-all">
                 <i class="fa-solid fa-house text-secondary dark:text-icon text-sm w-4 text-center"></i>
                 <span>الرئيسية</span>
               </a>
             </li>
             <li>
-              <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-xs hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
+              <a href="#"
+                class="flex items-center gap-3 px-4 py-2.5 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-xs hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
                 <i class="fa-solid fa-hospital text-secondary dark:text-icon text-sm w-4 text-center"></i>
                 <span>عن العيادة</span>
               </a>
             </li>
             <li>
-              <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-xs hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
+              <a href="#"
+                class="flex items-center gap-3 px-4 py-2.5 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-xs hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
                 <i class="fa-solid fa-map-location-dot text-secondary dark:text-icon text-sm w-4 text-center"></i>
                 <span>موقعنا</span>
               </a>
             </li>
             <li>
-              <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-xs hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
+              <a href="#"
+                class="flex items-center gap-3 px-4 py-2.5 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-xs hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
                 <i class="fa-solid fa-notes-medical text-secondary dark:text-icon text-sm w-4 text-center"></i>
                 <span>مراحل التحول والتعافي</span>
               </a>
             </li>
             <li>
-              <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-xs hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
+              <a href="#"
+                class="flex items-center gap-3 px-4 py-2.5 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-xs hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
                 <i class="fa-solid fa-user-doctor text-secondary dark:text-icon text-sm w-4 text-center"></i>
                 <span>عن الطبيب</span>
               </a>
@@ -188,22 +221,27 @@
         </div>
 
         <div class="border-t border-border/40 dark:border-white/5 pt-4">
-          <span class="block text-[11px] font-bold text-gray-400 dark:text-gray-500 mb-3 uppercase tracking-wider font-secondary">لوحات التحكم الرقمية</span>
+          <span
+            class="block text-[11px] font-bold text-gray-400 dark:text-gray-500 mb-3 uppercase tracking-wider font-secondary">لوحات
+            التحكم الرقمية</span>
           <ul class="space-y-2 font-secondary">
             <li>
-              <a href="../pages/dashboard/patient/patient-dashboard.html" class="flex items-center gap-3 px-4 py-2.5 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-xs hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
+              <a href="../pages/dashboard/patient/patient-dashboard.html"
+                class="flex items-center gap-3 px-4 py-2.5 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-xs hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
                 <i class="fa-solid fa-user-injured text-gray-400 dark:text-gray-500 text-sm w-4 text-center"></i>
                 <span>بوابة المريض المخصصة</span>
               </a>
             </li>
             <li>
-              <a href="../pages/dashboard/doctor/doctor-dashboard.html" class="flex items-center gap-3 px-4 py-2.5 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-xs hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
+              <a href="../pages/dashboard/doctor/doctor-dashboard.html"
+                class="flex items-center gap-3 px-4 py-2.5 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-xs hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
                 <i class="fa-solid fa-user-md text-gray-400 dark:text-gray-500 text-sm w-4 text-center"></i>
                 <span>بوابة الطبيب الإدارية</span>
               </a>
             </li>
             <li>
-              <a href="../pages/dashboard/secretary/secretary-dashboard.html" class="flex items-center gap-3 px-4 py-2.5 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-xs hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
+              <a href="../pages/dashboard/secretary/secretary-dashboard.html"
+                class="flex items-center gap-3 px-4 py-2.5 text-button dark:text-gray-300 hover:text-primary dark:hover:text-white font-bold text-xs hover:bg-input dark:hover:bg-[#00265C] rounded-xl transition-all">
                 <i class="fa-solid fa-user-tie text-gray-400 dark:text-gray-500 text-sm w-4 text-center"></i>
                 <span>بوابة السكرتارية والجدولة</span>
               </a>
@@ -212,18 +250,22 @@
         </div>
 
         <div class="border-t border-border/40 dark:border-white/10 pt-4 space-y-3">
-          <a href="../../pages/login_signup/login.html" class="flex items-center justify-center text-center bg-card dark:bg-[#003175] text-primary dark:text-white px-4 py-3 rounded-xl font-bold text-xs border border-primary/10 transition-all">
+          <a href="../../pages/login_signup/login.html"
+            class="flex items-center justify-center text-center bg-card dark:bg-[#003175] text-primary dark:text-white px-4 py-3 rounded-xl font-bold text-xs border border-primary/10 transition-all">
             تسجيل دخول / إنشاء حساب
           </a>
-          <a href="/pages/book.html" class="flex items-center justify-center text-center bg-button dark:bg-secondary text-white dark:text-[#001D47] px-4 py-3 rounded-xl font-bold text-xs shadow-md transition-all">
+          <a href="/pages/book.html"
+            class="flex items-center justify-center text-center bg-button dark:bg-secondary text-white dark:text-[#001D47] px-4 py-3 rounded-xl font-bold text-xs shadow-md transition-all">
             احجز موعداً فوريًا
           </a>
         </div>
       </div>
 
-      <div class="p-6 border-t border-border/40 dark:border-white/10 bg-input/30 dark:bg-[#00265C]/20 flex items-center justify-between">
+      <div
+        class="p-6 border-t border-border/40 dark:border-white/10 bg-input/30 dark:bg-[#00265C]/20 flex items-center justify-between">
         <span class="text-xs font-bold text-gray-500 dark:text-gray-400 font-secondary">مظهر التطبيق</span>
-        <button id="theme-toggle-mobile" type="button" class="text-primary dark:text-icon bg-white dark:bg-[#00265C] border border-border dark:border-white/10 rounded-xl text-sm p-2.5 shadow-sm">
+        <button id="theme-toggle-mobile" type="button"
+          class="text-primary dark:text-icon bg-white dark:bg-[#00265C] border border-border dark:border-white/10 rounded-xl text-sm p-2.5 shadow-sm">
           <i class="fa-solid fa-moon dark:hidden"></i>
           <i class="fa-solid fa-sun hidden dark:block"></i>
         </button>
@@ -408,41 +450,7 @@
   <footer
     class="relative bg-white dark:bg-[#001D47] text-primary transition-colors duration-300 border-t border-border/40 dark:border-white/10  overflow-hidden pt-20">
     <div class="max-w-[1600px] mx-auto px-6 md:px-16 relative z-10">
-      <!-- الطبقة الأولى: بطاقة الحجز الفورية العريضة (Mega Call-To-Action Card) -->
-      <div
-        class="relative bg-gradient-to-l from-input/60 to-card/40 dark:from-[#00265C] dark:to-[#001D47] rounded-[2.5rem] p-8 md:p-12 border border-border/60 dark:border-white/10 flex flex-col lg:flex-row items-center justify-between gap-8 mb-16 shadow-lg group">
-        <!-- شارة صغيرة عائمة -->
-        <div
-          class="absolute -top-3.5 right-10 bg-secondary dark:bg-icon text-white dark:text-[#001D47] px-4 py-1 rounded-full text-[10px] font-bold font-secondary tracking-wide shadow-sm">
-          الجدولة الذكية 2026
-        </div>
 
-        <div class="text-right space-y-2 lg:max-w-2xl">
-          <h3 class="text-2xl md:text-3xl font-primary font-bold text-primary dark:text-white leading-tight">
-            ابدأ رحلة تعافيك الآن مع
-            <span
-              class="text-transparent bg-clip-text bg-gradient-to-l from-secondary to-primary dark:from-icon dark:to-white">أنظمة
-              الجراحة الميكروسكوبية</span>
-          </h3>
-          <p class="text-primary/70 dark:text-gray-300 font-secondary text-sm leading-relaxed">
-            احجز استشارتك التخصصية المباشرة مع الدكتور عمار السايح لتجربة
-            علاجية مخصصة تضمن لك الأمان والراحة التامة.
-          </p>
-        </div>
-
-        <div class="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto shrink-0 font-primary">
-          <a href="tel:+966500000000"
-            class="w-full sm:w-auto text-center bg-card dark:bg-white/5 hover:bg-primary/5 text-primary dark:text-white border border-border dark:border-white/10 px-6 py-3.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-2">
-            <i class="fa-solid fa-headset text-secondary dark:text-icon"></i>
-            دعم فوري
-          </a>
-          <a href="#"
-            class="w-full sm:w-auto text-center bg-button dark:bg-secondary text-white dark:text-[#001D47] hover:bg-button-hover dark:hover:bg-icon px-8 py-3.5 rounded-xl font-bold text-xs transition-all shadow-md active:scale-95 flex items-center justify-center gap-2">
-            <span>تأكيد حجز سريع</span>
-            <i class="fa-solid fa-arrow-left-long"></i>
-          </a>
-        </div>
-      </div>
       <!-- الطبقة الثانية: الهوية والروابط الموزعة بهندسة خطية أنيقة -->
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 text-right font-secondary border-b border-border/40 dark:border-white/5">
@@ -452,10 +460,9 @@
             <img src="../src/images/logo.png" alt="Logo"
               class="w-14 h-auto transition-transform duration-300 group-hover:scale-105" />
             <div>
-              <span class="block text-primary dark:text-white font-bold text-xl leading-none font-primary">د. عمار
-                السايح</span>
-              <span class="text-secondary dark:text-icon text-xs font-semibold block mt-1">للجراحة العامة
-                والمناظير</span>
+              <span class="block text-primary dark:text-white font-bold text-lg leading-none">د. عمار السايح</span>
+              <span class="text-secondary dark:text-icon text-[11px] font-secondary font-semibold">للجراحة العامة
+              </span>
             </div>
           </a>
           <p class="text-sm text-primary/70 dark:text-gray-400 leading-relaxed">

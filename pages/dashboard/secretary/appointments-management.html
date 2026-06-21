@@ -95,9 +95,87 @@
       class="bg-white dark:bg-[#00265C] border-b border-border dark:border-white/10 h-16 flex items-center justify-between px-6 md:px-8 shrink-0 shadow-sm z-40">
       <div class="flex items-center gap-4">
         <button id="mobile-sidebar-toggle"
-          class="lg:hidden w-10 h-10 flex items-center justify-center text-primary dark:text-white bg-input dark:bg-[#003175] rounded-xl border border-border dark:border-white/10">
+          class="lg:hidden w-10 h-10 flex items-center justify-center text-primary dark:text-white bg-input dark:bg-[#003175] rounded-xl border border-border dark:border-white/10 active:scale-95 transition-all">
           <i class="fa-solid fa-bars-staggered text-lg"></i>
         </button>
+
+        <div id="doctor-mobile-sidebar" class="fixed inset-0 z-[150] pointer-events-none font-primary">
+          <div id="doctor-sidebar-overlay"
+            class="absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0 transition-opacity duration-300 ease-in-out">
+          </div>
+
+          <div id="doctor-sidebar-content"
+            class="absolute top-0 right-0 w-[300px] h-full bg-white dark:bg-[#00265C] shadow-2xl border-l border-border dark:border-white/10 translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between">
+            <div>
+              <div class="p-6 border-b border-border dark:border-white/10 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <img src="../../../src/images/logo.png" alt="Logo" class="w-10 h-auto" />
+                  <div class="text-right">
+                    <span class="block text-primary dark:text-white font-bold text-base leading-none">بوابة
+                      الطبيب</span>
+                    <span class="text-secondary dark:text-icon text-[11px] font-secondary font-semibold">د. عمار
+                      السايح</span>
+                  </div>
+                </div>
+                <button id="doctor-sidebar-close"
+                  class="w-9 h-9 flex items-center justify-center rounded-xl bg-input dark:bg-[#001D47]/50 text-primary dark:text-white border border-border dark:border-white/10">
+                  <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+              </div>
+
+              <nav class="p-4 space-y-2 font-secondary">
+                <a href="doctor-dashboard.html"
+                  class="flex items-center gap-3 px-4 py-3 bg-card dark:bg-[#003A87] text-primary dark:text-white font-bold text-sm rounded-xl transition-all">
+                  <i class="fa-solid fa-house text-secondary dark:text-icon text-base"></i>
+                  <span>الرئيسية</span>
+                </a>
+                <a href="patients.html"
+                  class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white font-medium text-sm rounded-xl border border-transparent hover:border-border dark:hover:border-white/10 transition-all">
+                  <i class="fa-solid fa-user-injured text-secondary dark:text-icon text-base"></i>
+                  <span>قائمة المرضى الحالية</span>
+                </a>
+                <a href="records.html"
+                  class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white font-medium text-sm rounded-xl border border-transparent hover:border-border dark:hover:border-white/10 transition-all">
+                  <i class="fa-solid fa-folder-open text-secondary dark:text-icon text-base"></i>
+                  <span>السجلات الطبية</span>
+                </a>
+                <a href="schedule.html"
+                  class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-input/70 dark:hover:bg-[#003175] hover:text-primary dark:hover:text-white font-medium text-sm rounded-xl border border-transparent hover:border-border dark:hover:border-white/10 transition-all">
+                  <i class="fa-solid fa-calendar-days text-secondary dark:text-icon text-base"></i>
+                  <span>جدول المواعيد</span>
+                </a>
+              </nav>
+            </div>
+
+            <div
+              class="p-4 border-t border-border dark:border-white/10 bg-input/30 dark:bg-[#001D47]/30 font-secondary">
+              <div class="flex items-center gap-3 mb-3">
+                <img src="../../../src/images/dr.png" alt="الدكتور عمار السايح"
+                  class="w-12 h-12 rounded-xl object-cover border border-secondary/30" />
+                <div class="text-right">
+                  <h4 class="text-xs font-bold text-primary dark:text-white">
+                    د. عمار السايح
+                  </h4>
+                  <p class="text-[10px] text-gray-500 dark:text-gray-400">
+                    جراحة عامة
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="space-y-1.5 text-[11px] text-gray-600 dark:text-gray-300 bg-white dark:bg-[#00265C] p-2.5 rounded-xl border border-border dark:border-white/5">
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-clock text-secondary dark:text-icon text-xs"></i>
+                  <span>الدوام: 04:00 م - 10:00 م</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-location-dot text-secondary dark:text-icon text-xs"></i>
+                  <span>العيادة الرئيسية - الطابق 3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <h2 class="text-lg font-bold text-primary dark:text-white hidden sm:block">إدارة المواعيد</h2>
       </div>
 
@@ -237,6 +315,7 @@
   <script src="../../../src/js/script.js"></script>
   <script src="../../../src/js/book.js"></script>
   <script src="../../../src/js/dashboard-js/secretary.js"></script>
+  <script src="../../../src/js/dashboard-js/public.js"></script>
  
 </body>
 
